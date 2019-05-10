@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails todo: test" uuid="be3b70b2-e3f2-424b-862a-99099845b653">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+    </data-source>
+    <data-source name="Rails todo: development" uuid="0e7032ce-7b0e-411e-b663-0498a86f290c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+    </data-source>
+    <data-source name="Rails todo: production" uuid="2216eb2b-a02a-4f9e-ae10-6ccc2271e221">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>todo</user-name>
+    </data-source>
+  </component>
+</project>
