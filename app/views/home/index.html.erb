@@ -1,2 +1,11 @@
 <!--ここに表示する内容を書いていくが、rails仕様の％はここで使い、vueファイルは別に読み込む-->
-<%= javascript_pack_tag 'hello_vue' %>
+
+<div id="app">
+  <navbar></navbar>
+  <div class="container">
+    <router-view></router-view>
+  </div>
+</div>
+<%= javascript_pack_tag 'todo' %>
+<%= stylesheet_pack_tag 'todo' %>
+

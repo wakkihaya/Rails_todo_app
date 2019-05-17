@@ -1,133 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Todo</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title> TODO</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-    <header>
-      <p>TO DO application</p>
-      <div class="menu">
-        <input id="nav-input" type="checkbox" class="unshown">
-      <label class="menu-trigger" for="nav-input">
-        <span></span>
-        <span></span>
-        <span></span>
-        </label>
-      <ul class="menu-content">
-        <li>Top</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-      </div>
-    </header>
-    <%= yield %>
-  </body>
+</head>
+
+<body>
+
+<!--<div class="container">-->
+  <%= yield %>
+  <%#= render 'layouts/footer' %>
+  <%#= debug(params) if Rails.env.development? %>
+
+<!--</div>-->
+</body>
 </html>
-
-<style>
-
-  *{
-    margin:0;
-    padding:0;
-  }
-
-  header{
-    position:relative;
-    margin:0;
-    padding:0;
-    height:50px;
-    background-color:#ff9999;
-    width:100%;
-  }
-
-  header p{
-    line-height:50px;
-    font-size:20px;
-    color:#fff;
-  }
-
-    .menu{
-      position:absolute;
-      top:8px;
-      right:8px;
-      height:50px;
-      width:70px;
-    }
-
-    .unshown {
-      display: none;
-    }
-
-    .menu-trigger,
-    .menu-trigger span{
-      display:inline-block;
-    }
-
-    .menu-trigger{
-      position:relative;
-      width:32px;
-      top:0;
-      right:0;
-      height:34px;
-    }
-
-    .menu-trigger span{
-      position:absolute;
-      left:0;
-      width:100%;
-      height:4px;
-      border-radius:4px;
-      background-color: #000;
-    }
-
-    .menu-trigger span:nth-of-type(1){
-      top:0;
-    }
-
-    .menu-trigger span:nth-of-type(2){
-      top:14px;
-    }
-
-    .menu-trigger span:nth-of-type(3){
-      bottom:0;
-    }
-
-  .menu-trigger.active span:nth-of-type(1) {
-    -webkit-transform: translateY(20px) rotate(-45deg);
-    transform: translateY(20px) rotate(-45deg);
-  }
-  .menu-trigger.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-  .menu-trigger.active span:nth-of-type(3) {
-    -webkit-transform: translateY(-20px) rotate(45deg);
-    transform: translateY(-20px) rotate(45deg);
-  }
-
-  #nav-input:checked ~ .menu-content{
-    display:block;
-    overflow: hidden;
-  }
-
-  .menu-content{
-    display:none;
-    width: 5rem;
-    background: #ff3333;
-  
-  }
-  .menu-content li{
-      list-style-type: none;
-    border:solid 2px #000;
-    font-size:1.2rem;
-    text-align:center;
-    color:#fff;
-    box-sizing:border-box;
-    }
-
-</style>
